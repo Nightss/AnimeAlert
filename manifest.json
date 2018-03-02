@@ -1,12 +1,12 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "Anime Alert",
   "description": "Keep update with the latest anime with chrome notifcations!",
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "aa-icon.jpg",
+    "default_icon": "aa-icon.png",
     "default_popup": "main.html"
   },
   "permissions": [
