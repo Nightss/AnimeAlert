@@ -1,7 +1,8 @@
 # AnimeAlert
 Anime notification chrome extension
 
-########LAYOUT######## 
+# LAYOUT
+
 Page size
  Width: 450px
  Height: 575px
@@ -12,4 +13,3 @@ Grid System
   Gutters: Yes
   Grid-width: 27.5px
   Gutter-width: 10px
-  
