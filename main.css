@@ -1,9 +1,4 @@
-body {
-  width: 500px;
-  height: 1000px;
-  background-color: grey;
-}
-.test {
+.dev-class {
   width: 400px;
   height: 900px;
 }
