@@ -11,6 +11,6 @@ Page size
 Grid System
   Grids: 12
   Gutters: No
-  Grid-width: 27.5px
+  Grid-width: 37.5px
   Gutter-width: 0px
 </pre>

@@ -381,3 +381,25 @@ main > div.row > div.aa-col-5 > div {
   overflow: hidden;
 }
 /* End Main*/
+
+/* Popular Showcase*/
+.aa-popular-anime {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.aa-popular-anime > img {
+  width: 85px;
+  height: 85px;
+  margin-right: 20px;
+  box-shadow: 0px 1px 10px 3px #0c0a0a;
+  border: 1px solid #ffc957;
+}
+
+.aa-popular-anime > img:last-child {
+  margin-right: 0px;
+}
+/* End Popular Showcase*/
