@@ -11,6 +11,7 @@
   Head 
   Main
   Popular Showcase
+  Nav
 */
 /* End Appendix */
 
@@ -451,7 +452,7 @@ main > div.row > div.aa-col-5 > div {
   margin-right: 5px;
 }
 
-.aa-nav-icons:last-child {
+div.aa-nav-links > a:nth-of-type(5) > img.aa-nav-icons {
   margin-right: 0px;
 }
 /* End Navr*/
