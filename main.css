@@ -6,16 +6,22 @@
 
 /* Appendix */
 /*
-  Grid System
-  Background
-  Head 
-  Main
-  Popular Showcase
-  Nav
+  Global:
+    Grid System
+    Background
+    Nav
+  
+  Pages:
+    Main
+      - Head 
+      - Main
+      - Popular Showcase
+    Airing
+      - Sidebar
 */
 /* End Appendix */
 
-
+/* Main CSS */
 /* Grid Systsem */
 .aa-container {
   max-width: 450px;
@@ -75,6 +81,14 @@
 .aa-col-12 {
   width: 100%;   
 }
+
+.aa-col-20 {
+  width: 20%;
+}
+
+.aa-col-80 {
+  width: 80%;
+}
 /* End of Grid Systems */
 
 /* Background*/
@@ -94,6 +108,55 @@
   left: 50%;
 }
 /* End Background*/
+
+/* Nav */
+.aa-nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color:  #232323;
+  min-height: 40px
+  max-height: 40px;
+}
+.aa-nav-container {
+  display: flex;
+  min-height: 40px;
+  max-height: 40px;
+}
+
+.aa-nav-style {
+  min-height: 40px;
+  max-height: 40px;
+  padding: 10px 0px 0px 15px;
+  width: 30%;
+}
+
+.aa-nav-style:last-child {
+  padding: 10px 20px 0px 0px;
+}
+
+.aa-nav-style > img {
+  width: 120px;
+  height: 20px;
+}
+
+.aa-nav-links {
+  width: 40%;
+  min-height: 40px;
+  max-height: 40px;
+  padding: 8px 10px 8px 10px;
+}
+
+.aa-nav-icons {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+div.aa-nav-links > a:nth-of-type(5) > img.aa-nav-icons {
+  margin-right: 0px;
+}
+/* End Navr*/
 
 /* Head */
 .aa-head {
@@ -407,52 +470,218 @@ main > div.row > div.aa-col-5 > div {
   margin-right: 0px;
 }
 /* End Popular Showcase*/
+/* End Main CSS */
 
-/* Nav */
-.aa-nav {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color:  #232323;
-  min-height: 40px
-  max-height: 40px;
-}
-.aa-nav-container {
-  display: flex;
-  min-height: 40px;
-  max-height: 40px;
+/* Airing CSS */
+/* Sidebar */
+#aa-airing-sidebar {
+  background-color: #2e3136d9;
+  min-height: 535px;
+  max-height: 535px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.aa-nav-style {
-  min-height: 40px;
-  max-height: 40px;
-  padding: 10px 0px 0px 15px;
-  width: 30%;
+#aa-airing-sidebar::-webkit-scrollbar {
+    width: 10px;
 }
 
-.aa-nav-style:last-child {
-  padding: 10px 20px 0px 0px;
+#aa-airing-sidebar::-webkit-scrollbar-track {
+    background: #888888; 
+}
+ 
+#aa-airing-sidebar::-webkit-scrollbar-thumb {
+    background: #232323; 
 }
 
-.aa-nav-style > img {
-  width: 120px;
-  height: 20px;
+#aa-airing-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #ffc957; 
 }
 
-.aa-nav-links {
-  width: 40%;
-  min-height: 40px;
-  max-height: 40px;
-  padding: 8px 10px 8px 10px;
+.aa-sidebar-head {
+    position: fixed;
+    width: 20%;
+    max-width: 80px;
+    color: white;
+    background-color: #4b4d51;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 2px 1px 10px black;
+    border-bottom: 4px solid #f1f1f1;
 }
 
-.aa-nav-icons {
-  height: 25px;
-  width: 25px;
-  margin-right: 5px;
+.aa-genre-list {
+    list-style-type: none;
+    margin: 60px 0px 0px 0px;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
 }
 
-div.aa-nav-links > a:nth-of-type(5) > img.aa-nav-icons {
-  margin-right: 0px;
+ul.aa-genre-list > li {
+  margin-bottom: 20px; 
 }
-/* End Navr*/
+
+ul.aa-genre-list > li:last-child {
+  margin-bottom: 20px; 
+}
+
+ul.aa-genre-list > li > div {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  content: "";
+  margin: 0 auto;
+}
+
+ul.aa-genre-list > li:hover::after {
+    position: relative;
+    top: 10px;
+    color: #ffffff;
+    width: 100px;
+    height: 25px;
+    padding: 2px;
+    content: attr(data-descr);
+    text-align: center;
+    font-style: italic;
+}
+
+#action {
+  background-image: url("../Images/Genre/action.svg");
+}
+
+#action:hover {
+  background-image: url("../Images/Genre/action_focus.svg");
+}
+
+#adventure {
+  background-image: url("../Images/Genre/adventure.svg");
+}
+
+#adventure:hover {
+  background-image: url("../Images/Genre/adventure_focus.svg");
+}
+
+#comedy {
+  background-image: url("../Images/Genre/comedy.svg");
+}
+
+#comedy:hover {
+  background-image: url("../Images/Genre/comedy_focus.svg");
+}
+
+#fantasy {
+  background-image: url("../Images/Genre/fantasy.svg");
+}
+
+#fantasy:hover {
+  background-image: url("../Images/Genre/fantasy_focus.svg");
+}
+
+#game {
+  background-image: url("../Images/Genre/game.svg");
+}
+
+#game:hover {
+  background-image: url("../Images/Genre/game_focus.svg");
+}
+
+#harem {
+  background-image: url("../Images/Genre/harem.svg");
+}
+
+#harem:hover {
+  background-image: url("../Images/Genre/harem_focus.svg");
+}
+
+#horror {
+  background-image: url("../Images/Genre/horror.svg");
+}
+
+#horror:hover {
+  background-image: url("../Images/Genre/horror_focus.svg");
+}
+
+#magic {
+  background-image: url("../Images/Genre/magic.svg");
+}
+
+#magic:hover {
+  background-image: url("../Images/Genre/magic_focus.svg");
+}
+
+#martial_arts {
+  background-image: url("../Images/Genre/martial_arts.svg");
+}
+
+#martial_arts:hover {
+  background-image: url("../Images/Genre/martial_arts_focus.svg");
+}
+
+#mecha {
+  background-image: url("../Images/Genre/mecha.svg");
+}
+
+#mecha:hover {
+  background-image: url("../Images/Genre/mecha_focus.svg");
+}
+
+#music {
+  background-image: url("../Images/Genre/music.svg");
+}
+
+#music:hover {
+  background-image: url("../Images/Genre/music_focus.svg");
+}
+
+#mystery {
+  background-image: url("../Images/Genre/mystery.svg");
+}
+
+#mystery:hover {
+  background-image: url("../Images/Genre/mystery_focus.svg");
+}
+
+#psychological {
+  background-image: url("../Images/Genre/psychological.svg");
+}
+
+#psychological:hover {
+  background-image: url("../Images/Genre/psychological_focus.svg");
+}
+
+#romance {
+  background-image: url("../Images/Genre/romance.svg");
+}
+
+#romance:hover {
+  background-image: url("../Images/Genre/romance_focus.svg");
+}
+
+#school {
+  background-image: url("../Images/Genre/school.svg");
+}
+
+#school:hover {
+  background-image: url("../Images/Genre/school_focus.svg");
+}
+
+#slice_of_life {
+  background-image: url("../Images/Genre/slice_of_life.svg");
+}
+
+#slice_of_life:hover {
+  background-image: url("../Images/Genre/slice_of_life_focus.svg");
+}
+
+#sport {
+  background-image: url("../Images/Genre/sport.svg");
+}
+
+#sport:hover {
+  background-image: url("../Images/Genre/sport_focus.svg");
+}
+/* End Sidebar */
+/* End Airing CSS*/
