@@ -18,6 +18,9 @@
       - Popular Showcase
     Airing
       - Sidebar
+        - Seasons
+        - Genres
+      - Main
 */
 /* End Appendix */
 
@@ -483,41 +486,141 @@ main > div.row > div.aa-col-5 > div {
 }
 
 #aa-airing-sidebar::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 #aa-airing-sidebar::-webkit-scrollbar-track {
-    background: #888888; 
+  background: #888888; 
 }
  
 #aa-airing-sidebar::-webkit-scrollbar-thumb {
-    background: #232323; 
+  background: #232323; 
 }
 
 #aa-airing-sidebar::-webkit-scrollbar-thumb:hover {
-    background: #ffc957; 
+  background: #ffc957; 
 }
 
 .aa-sidebar-head {
-    position: fixed;
-    width: 20%;
-    max-width: 80px;
-    color: white;
-    background-color: #4b4d51;
-    padding: 8px;
-    font-size: 16px;
-    font-weight: bolder;
-    text-align: center;
-    text-shadow: 2px 1px 10px black;
-    border-bottom: 4px solid #f1f1f1;
+  position: fixed;
+  top: 190px;
+  z-index: 1;
+  width: 20%;
+  max-width: 80px;
+  color: white;
+  background-color: #ffc957;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 2px 1px 10px black;
+  border-bottom: 4px solid #f1f1f1;
+}
+
+/* - Seasons */
+.aa-seasons-wrapper {
+  height: 200px;
+  position: initial;
+  position: fixed;
+  background-color: #4b4d51;
+  z-index: 1;
+  width: 80px;
+}
+
+.aa-seasons-head {
+  color: white;
+  background-color: #ffc957;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 2px 1px 10px black;
+  border-bottom: 4px solid white;
+}
+
+.aa-seasons-holder {
+  min-height: 100px;
+}
+
+.aa-season-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.aa-season-list > li {
+  height: 25px;
+  max-height: 25px;
+  margin-bottom: 10px;
+}
+
+.aa-season-list > li:hover:after {
+  height: 25px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -24px;
+  left: 90px;
+  z-index: 100;
+  color: #f3c053;
+  background: #ffffff;
+  font-style: italic;
+  font-size: 18px;
+  content: attr(season);
+}
+.aa-season-list > li > div {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-size: 25px 25px;
+  margin: 0 auto;
+}
+
+#winter {
+  background-image: url("../Images/Seasons/winter-1.svg");
+}
+
+#winter:hover {
+  background-image: url("../Images/Seasons/winter-2.svg");
+}
+
+#spring {
+  background-image: url("../Images/Seasons/spring-1.svg");
+}
+
+#spring:hover {
+  background-image: url("../Images/Seasons/spring-2.svg");
+}
+
+#summer {
+  background-image: url("../Images/Seasons/summer-1.svg");
+}
+
+#summer:hover {
+  background-image: url("../Images/Seasons/summer-2.svg");
+}
+
+#autumn {
+  background-image: url("../Images/Seasons/autumn-1.svg");
+}
+
+#autumn:hover {
+  background-image: url("../Images/Seasons/autumn-2.svg");
+}
+/* - End Seasons*/
+
+/* - Genres */
+.aa-genre-holder {
+  margin-top: 245px;
 }
 
 .aa-genre-list {
-    list-style-type: none;
-    margin: 60px 0px 0px 0px;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
+  list-style-type: none;
+  margin: 60px 0px 0px 0px;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
 }
 
 ul.aa-genre-list > li {
@@ -537,15 +640,15 @@ ul.aa-genre-list > li > div {
 }
 
 ul.aa-genre-list > li:hover::after {
-    position: relative;
-    top: 10px;
-    color: #ffffff;
-    width: 100px;
-    height: 25px;
-    padding: 2px;
-    content: attr(data-descr);
-    text-align: center;
-    font-style: italic;
+  position: relative;
+  top: 10px;
+  color: #ffffff;
+  width: 100px;
+  height: 25px;
+  padding: 2px;
+  content: attr(data-descr);
+  text-align: center;
+  font-style: italic;
 }
 
 #action {
@@ -683,5 +786,32 @@ ul.aa-genre-list > li:hover::after {
 #sport:hover {
   background-image: url("../Images/Genre/sport_focus.svg");
 }
+/* - End Genres */
 /* End Sidebar */
+
+/* Airing Main */
+#aa-airing-main {
+  width: 100%;
+  min-height: 535px;
+  max-height: 535px;
+  overflow-y: scroll;
+}
+
+.aa-airing-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.aa-airing-card {
+  background-color: black;
+  width: 150px;
+  height: 165px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* End Airing Main*/
 /* End Airing CSS*/
